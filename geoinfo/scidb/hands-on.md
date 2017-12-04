@@ -2,13 +2,13 @@
 
 ## Running SciDB container
 
-To start the SciDB container, execute in the terminal the following command:
+In order to start the SciDB container, type the following command in your terminal:
 
 ```bash
 docker run -it --name geoinfo-2017 esensing/scidb:16.9
 ```
 
-In the opened terminal, type the following command in order to change to user ```scidb```:
+In the opened terminal, type the following command in order to change the user to ```scidb```:
 
 ```
 su - scidb
@@ -29,7 +29,8 @@ In order to check if the array created in the last step was correctly defined, t
 iquery -aq "list('arrays');"
 ```
 
-We can verify that this array is empty using the following command:
+
+We can verify that this array is empty typing the following command in the terminal:
 ```bash
 iquery -aq "scan(mod13q1);"
 ```
@@ -79,13 +80,13 @@ iquery -aq "store(window(evi_array, 0, 2, 0, 2, 0, 0, avg(new_evi)),mod13q1_evi_
 
 ## Calculating the average of time series
 
-In order to download the example script, type the following command in the container terminal:
+In order to download the example, type the following command in the **container** terminal:
 
 ```
 wget https://raw.githubusercontent.com/e-sensing/notebooks/master/worcap-2017/scidb/avg_time.py -O /tmp/avg_time.py
 ```
 
-O conteúdo do script ```avg_time.py``` segue abaixo:
+The content of avg_time.py file ```avg_time.py``` is:
 ```python
 #!/usr/bin/python
 
@@ -95,10 +96,10 @@ end_of_interaction = 0
 while (end_of_interaction != 1):
   header = sys.stdin.readline().rstrip()
   if(header != "0"):
-    # received lines
+    # number received lines
     num_lines = int(header)
     
-    # attributes
+    # attributes arrays
     nir = []
     red = []
     blue = []
