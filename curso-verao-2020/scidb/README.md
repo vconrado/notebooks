@@ -5,10 +5,10 @@
 Para inicializar o contêiner do SciDB, execute no terminal o seguinte comando (aguarde, pode demorar alguns minutos):
 
 ```bash
-docker run -it --name curso-versao-2020 -e CLUSTER=curso-verao vconrado/scidb-stream:16.9
+docker run -it --name curso-verao-2020 -e CLUSTER=curso-verao vconrado/scidb-stream:16.9
 ```
 
-Será aberta uma janela do terminal no contêiner. Rode o comando abaixo para verificar tudo está rodando corretamente:
+Será aberta uma janela do terminal no contêiner. Rode o comando abaixo para verificar se tudo está rodando corretamente:
 ```bash
 iquery --version
 ```
